@@ -1,0 +1,62 @@
+
+<div class="video_fast_body">
+    <div class="video_box_fast">
+        <h1 class="video_fast_name">Nhận diện cảm xúc video nhanh</h1>
+        <form id="upload_form" method="post" enctype="multipart/form-data" action="/video/upload">
+            <label for="file">Chọn video để tải lên:</label>
+            <input type="file" id="video_profile" name="video_profile" accept=".mp4, .avi" />
+            <button type="submit">Chấp nhận</button>
+        </form>
+
+        <!-- Trường nhập phút và giây -->
+        <div>
+            <label for="input_minutes">Nhập phút:</label>
+            <input type="number" id="input_minutes" min="0" />
+            <label for="input_seconds">Nhập giây:</label>
+            <input type="number" id="input_seconds" min="0" max="59" />
+        </div>
+
+        <!-- Thông báo lỗi nếu người dùng chưa nhập đầy đủ phút và giây -->
+        <div id="alert_message" style="color: red; display: none;">Vui lòng nhập đầy đủ phút và giây!</div>
+
+        <div class="video_fast_container">
+            <div class="box_video_fast">
+                <div class="video_fast_wrapper">
+                    <video id="video_fast_player" class="empty_video_fast" controls></video>
+                    <div class="video_fast_placeholder" id="placeholder_video_fast_player">No Video Loaded</div>
+                </div>
+                <div class="video_image_fast_wrapper">
+                    <div id="video_fast_player_identification" class="empty_video_image_fast">
+                        <!-- Processed frames with detected emotions will be added here -->
+                    </div>
+                    <div class="video_image_fast_placeholder" id="placeholder_video_fast_identification">No video images loaded</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Nút chấp nhận -->
+        <button id="btn_check_video_fast" style="display: none;">Bắt đầu kiểm tra</button>
+    </div>
+</div>
+
+<div id="emotion_statistics" class="emotion-stats-container" style="display: none;">
+    <h2>Thống kê cảm xúc</h2>
+    <table id="emotion_table" class="emotion-stats-table">
+        <thead>
+            <tr>
+                <th>Cảm xúc</th>
+                <th>Số lần xuất hiện</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+
+
+<!-- Link the JavaScript file -->
+<script src="{{ url_for('static', filename='js/video_fast.js') }}"></script>
+
+
+

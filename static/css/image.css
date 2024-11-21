@@ -1,0 +1,85 @@
+.image_body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 50%;
+    background-color: #f0f0f0; /* Màu nền nhạt */
+}
+
+.image_box{
+    width: 90%;
+    max-width: 50%; /* Đảm bảo khung có kích thước hợp lý */
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.image_name{
+
+}
+
+.image_container{
+
+}
+
+.box_image{
+    display: flex;
+    /*justify-content: space-around;*/
+}
+
+.image_extraction{
+    width: 50%;
+    min-height: 300px;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.image_identification{
+    width: 50%;
+    min-height: 300px;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+#imageExtraction, #imageIdentification {
+    max-height: 300px; /* hoặc chiều cao phù hợp */
+    overflow-y: auto; /* Thêm thanh cuộn dọc */
+}
+
+
+.image_btn{
+
+}
+
+.btn_image_upload{
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn_2{
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn_check_images{
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(135, 243, 122);
+}
+
+.btn_4{
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(238, 101, 101);
+}
+.recognition_results{
+
+}

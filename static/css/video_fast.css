@@ -1,0 +1,164 @@
+.video_fast_body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.video_box_fast {
+    width: 90%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Video wrapper */
+.video_fast_wrapper, .video_image_fast_wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    height: 250px;  /* Fix the height of the container */
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    border-radius: 4px;
+    overflow: hidden;  /* Hide overflow outside the container */
+    background-color: #fff;
+}
+
+/* Styling for the video element */
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* Ensure the video fits within the container without distortion */
+}
+
+/* Placeholder for video */
+.video_fast_placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    z-index: 1;
+}
+
+/* Vertical image scroll container */
+#video_fast_player_identification {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    padding: 10px;
+    width: 100%;
+    height: 250px;  /* Fix the height to match the wrapper */
+    scroll-snap-type: y mandatory;
+    box-sizing: border-box;
+}
+
+/* Image styling */
+#video_fast_player_identification img {
+    width: 100%;  /* Make the images responsive to the container width */
+    height: auto;
+    max-width: 300px;  /* Set a max-width for the images */
+    scroll-snap-align: start;
+}
+
+/* Placeholder for images before loading */
+.video_image_fast_placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    z-index: 1;
+}
+
+/* Hide the placeholder when images are loaded */
+#video_fast_player_identification:not(:empty) + .video_image_fast_placeholder {
+    display: none;
+}
+
+/* Hide the placeholder when a video is loaded */
+video:not(.empty_video_fast) + .video_fast_placeholder {
+    display: none;
+}
+
+/* Button styling */
+#btn_check_video_fast {
+    display: none;
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    max-width: 200px;
+    text-align: center;
+}
+
+#btn_check_video_fast:hover {
+    background-color: #333333;
+}
+
+.emotion-stats-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.emotion-stats-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.emotion-stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.emotion-stats-table thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+.emotion-stats-table th, .emotion-stats-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.emotion-stats-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.emotion-stats-table tbody tr:hover {
+    background-color: #f1f1f1;
+}

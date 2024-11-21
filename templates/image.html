@@ -1,0 +1,27 @@
+
+    <div class="image_body">
+        <div class="image_box">
+            <h1 class="image_name">Nhận diện cảm xúc hình ảnh</h1>
+            <div class="image_container">
+                <div class="box_image">
+                    <div class="image_extraction" id="imageExtraction">
+                    <!-- Khu vực hiển thị hình ảnh -->
+                    </div>
+                    <div class="image_identification" id="imageIdentification">
+                        <!-- Khu vực hiển thị hình ảnh -->
+                    </div>
+                </div>
+                <div id="loading" style="display: none;">Đang xử lý...</div>
+                <div class="image_btn">
+                    <input class="btn_image_upload" type="file" id="imageUpload" multiple accept="image/*" onchange="previewImage()">
+                    <button class="btn_check_images" onclick="checkImages()">Kiểm tra</button>
+                </div>
+                <div class="recognition_results" id="result">
+                    <!-- Kết quả cảm xúc sẽ hiển thị ở đây -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Liên kết file JavaScript -->
+    <script src="{{ url_for('static', filename='js/image.js') }}"></script>
+

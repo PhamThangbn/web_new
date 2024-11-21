@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="webcam_body">
+    <div class="webcam_box">
+        <div class="webcam_box_name">
+            <h1 class="webcam_box_name_index">Nhận diện cảm xúc webcam</h1>
+        </div>
+        <div class="webcam_wrapper">
+            <!-- Use data-url attribute to store the video feed URL -->
+            <img class="webcam_link" src="" id="videoStream" data-url="{{ url_for('emotion_webcam.video_feed') }}">
+        </div>
+        <button class="button btn_webcam_start" onclick="startDetection()">Start</button>
+        <button class="button btn_webcam_stop" onclick="stopDetection()">Stop</button>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/webcam.js') }}"></script>
+{% endblock %}
+

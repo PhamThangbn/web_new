@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../static/css/styles.css"> 
+    <link rel="stylesheet" href="../static/css/webcam.css"> 
+    <link rel="stylesheet" href="../static/css/camera.css"> 
+    <link rel="stylesheet" href="../static/css/image.css"> 
+    <link rel="stylesheet" href="../static/css/video.css"> 
+    <link rel="stylesheet" href="../static/css/video_fast.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="{{ url_for('static', filename='js/base.js') }}" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Nhận diện cảm xúc khuôn mặt</h1>
+</header>
+
+<div class="header_nav">
+    <nav>
+        <a class="list_head" href="home.html">Trang chủ</a>
+        <div class="list_item_menu">
+            <a class="list_head" href="#" id="menu-toggle">Chức năng <i class="fas fa-caret-down"></i></a> <!-- Mũi tên chỉ xuống -->
+            <ul class="submenu" id="submenu"> <!-- Menu con -->
+                <li class="list_menu"><a class="list_link" href="webcam.html">Web cam</a></li>
+                <li class="list_menu"><a class="list_link" href="image.html">Hình ảnh</a></li>
+                <li class="list_menu"><a class="list_link" href="video.html">Video</a></li>
+                <li class="list_menu"><a class="list_link" href="video_fast.html">Video nhanh</a></li>
+                <li class="list_menu"><a class="list_link" href="camera.html">Camera trực tiếp</a></li>
+                <li class="list_menu"><a class="list_link" href="evaluation.html">Kết quả đánh giá</a></li>
+            </ul>
+        </div>
+        <a class="list_head" href="services.html">Dịch vụ</a>
+        <a class="list_head" href="about.html">Giới thiệu</a>
+        <a class="list_head" href="contact.html">Liên hệ</a>
+    </nav>
+</div>
+
+
+<div class="center">
+    <section>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 YourWebsite. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

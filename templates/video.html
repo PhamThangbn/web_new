@@ -1,0 +1,31 @@
+
+<div class="video_body">
+    <div class="video_box">
+        <h1 class="video_name">Nhận diện cảm xúc video</h1>
+        <form id="upload-form" method="post" enctype="multipart/form-data" action="/video/upload">
+            <label for="file">Chọn video để tải lên:</label>
+            <input type="file" id="video_profile" name="video_profile" accept=".mp4, .avi" />
+            <button type="submit">Chấp nhận</button>
+        </form>
+
+        <div class="video_container">
+            <!-- Video Gốc -->
+            <div class="video_wrapper">
+                <video id="video_player" class="empty_video" controls></video>
+                <div class="video_placeholder" id="placeholder_video_player">Chưa có video tải lên</div>
+            </div>
+
+            <!-- Video Sau Xử Lý -->
+            <div class="video_wrapper">
+                <video id="video_player_identification" class="empty_video" controls></video>
+                <div class="video_placeholder" id="placeholder_video_identification">Chưa có video xử lý</div>
+            </div>
+        </div>
+
+        <button id="btn_check_video" style="display: none;">Bắt đầu kiểm tra</button>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../static/css/video.css"
+
+

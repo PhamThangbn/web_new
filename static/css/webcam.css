@@ -1,0 +1,82 @@
+/* webcam.css */
+
+/* Căn chỉnh tổng thể cho phần body của trang */
+.webcam_body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 50%;
+    background-color: #f0f0f0; /* Màu nền nhạt */
+}
+
+.webcam_box {
+    width: 90%;
+    max-width: 500px; /* Đảm bảo khung có kích thước hợp lý */
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.webcam_box_name {
+    margin-bottom: 20px;
+}
+
+.webcam_box_name_index {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Đặt màu nền trắng cho .box_image và thiết lập chiều cao cố định */
+.webcam_wrapper {
+    background-color: white; /* Màu nền trắng khi chưa có video */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    height: 360px; /* Chiều cao cố định */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.webcam_link {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* Khi video tải thành công */
+.webcam_link[src] {
+    background-color: transparent; /* Bỏ màu nền */
+}
+
+/* Nút Start và Stop */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_webcam_start {
+    background-color: #4CAF50; /* Xanh cho Start */
+}
+
+.btn_webcam_stop {
+    background-color: #F44336; /* Đỏ cho Stop */
+}
+
+/* Thay đổi màu khi rê chuột */
+.button:hover {
+    background-color: #333333;
+}
